@@ -10,8 +10,6 @@ This project is an AWS CDK application that creates a serverless CRUD API for ma
 - [Setup](#setup)
 - [Deployment](#deployment)
 - [Usage](#usage)
-- [Testing](#testing)
-- [License](#license)
 
 ## Features
 
@@ -39,4 +37,37 @@ This project utilizes the following AWS services:
   ```
 
 ## Setup
+
 - Clone this repository:
+  ```bash
+  git clone https://github.com/carlosacg/aws_cdk_crud.git
+  cd aws_cdk_crud
+  ```
+- Install Python dependencies
+  ```bash
+  pip install -r requirements.txt
+  ```
+
+## Deployment
+
+- Synthesize the CloudFormation template:
+  ```bash
+  cdk synth
+  ```
+- Deploy the stack:
+  ```bash
+  cdk deploy
+  ```
+- After deployment, the API Gateway URL will be displayed in the terminal. You can use this URL to interact with the API.
+
+## Usage
+# Endpoints
+- Create Task
+  ```bash
+  #Request body
+  {
+    "title": "Task Title",
+    "description": "Task Description",
+    "status": "pending"
+  }
+  ```
