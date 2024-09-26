@@ -71,3 +71,24 @@ This project utilizes the following AWS services:
     "status": "pending"
   }
   ```
+
+- Get Task
+  ```bash
+  GET /tasks/{taskId}
+  ```
+
+- Update Task
+  ```bash
+  PUT /tasks/{taskId}
+  #Request body
+  {
+    "title": "Updated Title",
+    "description": "Updated Description",
+    "status": "completed"
+  }
+  ```
+
+- Delete Task
+  ```bash
+  DELETE /tasks/{taskId}
+  ```
